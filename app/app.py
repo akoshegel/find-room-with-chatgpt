@@ -12,8 +12,8 @@ advertisment_service = Dependencies.make_advertisment_service()
 app = FastAPI()
 
 
-# route for retrieving rated advertisment for user
+# route for retrieving scored advertisment for user
 @app.get("/")
-def read_advertisments(min_rate: int = 5, limit: int = 5, user_id: int = 1):
+def read_advertisments(limit: int = 5, user_id: int = 1):
     # returning data from advertisment service
     return advertisment_service.get_advertisments(user_id=1, limit=5)

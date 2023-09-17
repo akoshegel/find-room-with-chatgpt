@@ -63,8 +63,8 @@ class ChatGPT:
         # return parsed json response from chatgpt
         return json.loads(response["choices"][0]["message"]["content"])
 
-    # rates accomodations with chatgpt
-    def rate_advertisment(self, advertisment: Advertisment, preferences: Preferences):
+    # score accomodations with chatgpt
+    def score_advertisment(self, advertisment: Advertisment, preferences: Preferences):
         # create messages array
         messages = [
             *self.__base_prompts,

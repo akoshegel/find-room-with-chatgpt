@@ -7,7 +7,7 @@ logger = logging.getLogger("test_chatgpt_logger")
 
 def test_make_chatgpt_service():
     chatgpt = Dependencies.make_chatgpt()
-    response = chatgpt.rate_advertisment(
+    response = chatgpt.score_advertisment(
         {
             "text": "We offer a large room. No couples. Natural light and big couch.",
             "link": "link_to_post",
